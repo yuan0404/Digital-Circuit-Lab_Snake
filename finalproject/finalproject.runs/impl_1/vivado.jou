@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Fri Dec 29 09:46:09 2023
+# Process ID: 17628
+# Current directory: C:/Users/chaoy/Downloads/finalproject/finalproject.runs/impl_1
+# Command line: vivado.exe -log finalproject.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source finalproject.tcl -notrace
+# Log file: C:/Users/chaoy/Downloads/finalproject/finalproject.runs/impl_1/finalproject.vdi
+# Journal file: C:/Users/chaoy/Downloads/finalproject/finalproject.runs/impl_1\vivado.jou
+# Running On: MSI, OS: Windows, CPU Frequency: 1997 MHz, CPU Physical cores: 14, Host memory: 34045 MB
+#-----------------------------------------------------------
+source finalproject.tcl -notrace

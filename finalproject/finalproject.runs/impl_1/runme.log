@@ -1,0 +1,1369 @@
+
+*** Running vivado
+    with args -log finalproject.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source finalproject.tcl -notrace
+
+
+ECHO is off.
+ECHO is off.
+
+****** Vivado v2023.1 (64-bit)
+  **** SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+  **** IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+  **** SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source finalproject.tcl -notrace
+create_project: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 455.320 ; gain = 164.379
+Command: link_design -top finalproject -part xc7a35ticsg324-1L
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xc7a35ticsg324-1L
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.053 . Memory (MB): peak = 863.930 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 733 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2023.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/Users/chaoy/Downloads/finalproject/finalproject.srcs/constrs_1/new/finalproject.xdc]
+Finished Parsing XDC File [C:/Users/chaoy/Downloads/finalproject/finalproject.srcs/constrs_1/new/finalproject.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1012.531 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+7 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:03 ; elapsed = 00:00:13 . Memory (MB): peak = 1012.531 ; gain = 552.613
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a35ti'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a35ti'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:01 . Memory (MB): peak = 1032.508 ; gain = 19.977
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Cache Timing Information Task | Checksum: 1a48fd20b
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1584.965 ; gain = 552.457
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-1566] Pulled 12 inverters resulting in an inversion of 56 pins
+INFO: [Opt 31-138] Pushed 1 inverter(s) to 24 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 21a3481cf
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.746 . Memory (MB): peak = 1925.664 ; gain = 0.000
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 22 cells
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 2 Constant propagation | Checksum: 13698bfed
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.832 . Memory (MB): peak = 1925.664 ; gain = 0.000
+INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: 1b91be9db
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.957 . Memory (MB): peak = 1925.664 ; gain = 0.000
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 0 cells
+
+Phase 4 BUFG optimization
+Phase 4 BUFG optimization | Checksum: 1b91be9db
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:01 . Memory (MB): peak = 1925.664 ; gain = 0.000
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 5 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 5 Shift Register Optimization | Checksum: f6f6b43a
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1925.664 ; gain = 0.000
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 6 Post Processing Netlist
+Phase 6 Post Processing Netlist | Checksum: f6f6b43a
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1925.664 ; gain = 0.000
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |               0  |              22  |                                              0  |
+|  Constant propagation         |               0  |               0  |                                              0  |
+|  Sweep                        |               0  |               0  |                                              0  |
+|  BUFG optimization            |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                              0  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 1925.664 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: f6f6b43a
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1925.664 ; gain = 0.000
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+INFO: [Pwropt 34-9] Applying IDT optimizations ...
+INFO: [Pwropt 34-10] Applying ODC optimizations ...
+
+
+Starting PowerOpt Patch Enables Task
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 45 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
+Number of BRAM Ports augmented: 12 newly gated: 0 Total Ports: 90
+Number of Flops added for Enable Generation: 1
+
+Ending PowerOpt Patch Enables Task | Checksum: c732a4b1
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.130 . Memory (MB): peak = 2067.832 ; gain = 0.000
+Ending Power Optimization Task | Checksum: c732a4b1
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 2067.832 ; gain = 142.168
+
+Starting Final Cleanup Task
+
+Starting Logic Optimization Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Logic Optimization Task | Checksum: 13e77d893
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2067.832 ; gain = 0.000
+Ending Final Cleanup Task | Checksum: 13e77d893
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2067.832 ; gain = 0.000
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2067.832 ; gain = 0.000
+Ending Netlist Obfuscation Task | Checksum: 13e77d893
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2067.832 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+31 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 2067.832 ; gain = 1055.301
+INFO: [runtcl-4] Executing : report_drc -file finalproject_drc_opted.rpt -pb finalproject_drc_opted.pb -rpx finalproject_drc_opted.rpx
+Command: report_drc -file finalproject_drc_opted.rpt -pb finalproject_drc_opted.pb -rpx finalproject_drc_opted.rpx
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2023.1/data/ip'.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file C:/Users/chaoy/Downloads/finalproject/finalproject.runs/impl_1/finalproject_drc_opted.rpt.
+report_drc completed successfully
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.061 . Memory (MB): peak = 2067.832 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/chaoy/Downloads/finalproject/finalproject.runs/impl_1/finalproject_opt.dcp' has been generated.
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a35ti'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a35ti'
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 2 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2067.832 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 8c3582a0
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 2067.832 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2067.832 ; gain = 0.000
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 12bd1aeb2
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.892 . Memory (MB): peak = 2067.832 ; gain = 0.000
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: 1f6421150
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2067.832 ; gain = 0.000
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: 1f6421150
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2067.832 ; gain = 0.000
+Phase 1 Placer Initialization | Checksum: 1f6421150
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2067.832 ; gain = 0.000
+
+Phase 2 Global Placement
+
+Phase 2.1 Floorplanning
+Phase 2.1 Floorplanning | Checksum: 1fed76145
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2067.832 ; gain = 0.000
+
+Phase 2.2 Update Timing before SLR Path Opt
+Phase 2.2 Update Timing before SLR Path Opt | Checksum: 18b429d38
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2067.832 ; gain = 0.000
+
+Phase 2.3 Post-Processing in Floorplanning
+Phase 2.3 Post-Processing in Floorplanning | Checksum: 18b429d38
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2067.832 ; gain = 0.000
+
+Phase 2.4 Global Placement Core
+
+Phase 2.4.1 UpdateTiming Before Physical Synthesis
+Phase 2.4.1 UpdateTiming Before Physical Synthesis | Checksum: 2c52427cf
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:13 . Memory (MB): peak = 2067.832 ; gain = 0.000
+
+Phase 2.4.2 Physical Synthesis In Placer
+INFO: [Physopt 32-1035] Found 601 LUTNM shape to break, 88 LUT instances to create LUTNM shape
+INFO: [Physopt 32-1044] Break lutnm for timing: one critical 19, two critical 582, total 601, new lutff created 5
+INFO: [Physopt 32-1138] End 1 Pass. Optimized 638 nets or LUTs. Breaked 601 LUTs, combined 37 existing LUTs and moved 0 existing LUT
+INFO: [Physopt 32-65] No nets found for high-fanout optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-456] No candidate cells for DSP register optimization found in the design.
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-1123] No candidate cells found for Shift Register to Pipeline optimization
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-677] No candidate cells for Shift Register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-526] No candidate cells for BRAM register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-846] No candidate cells for URAM register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-846] No candidate cells for URAM register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-949] No candidate nets found for dynamic/static region interface net replication
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2067.832 ; gain = 0.000
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization                                     |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  LUT Combining                                    |          601  |             37  |                   638  |           0  |           1  |  00:00:00  |
+|  Retime                                           |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Very High Fanout                                 |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  DSP Register                                     |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Shift Register to Pipeline                       |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Shift Register                                   |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  BRAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  URAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Dynamic/Static Region Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Total                                            |          601  |             37  |                   638  |           0  |           9  |  00:00:00  |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Phase 2.4.2 Physical Synthesis In Placer | Checksum: 1e19983f8
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:14 . Memory (MB): peak = 2067.832 ; gain = 0.000
+Phase 2.4 Global Placement Core | Checksum: 1e8389192
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:15 . Memory (MB): peak = 2067.832 ; gain = 0.000
+Phase 2 Global Placement | Checksum: 1e8389192
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:15 . Memory (MB): peak = 2067.832 ; gain = 0.000
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 1fd2ebd0f
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:15 . Memory (MB): peak = 2067.832 ; gain = 0.000
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 18a9084e3
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:17 . Memory (MB): peak = 2067.832 ; gain = 0.000
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: 14271bd67
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:17 . Memory (MB): peak = 2067.832 ; gain = 0.000
+
+Phase 3.4 Pipeline Register Optimization
+Phase 3.4 Pipeline Register Optimization | Checksum: fa37be64
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:17 . Memory (MB): peak = 2067.832 ; gain = 0.000
+
+Phase 3.5 Fast Optimization
+Phase 3.5 Fast Optimization | Checksum: e6233121
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:20 . Memory (MB): peak = 2067.832 ; gain = 0.000
+
+Phase 3.6 Small Shape Detail Placement
+Phase 3.6 Small Shape Detail Placement | Checksum: 1d6408f0f
+
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:23 . Memory (MB): peak = 2067.832 ; gain = 0.000
+
+Phase 3.7 Re-assign LUT pins
+Phase 3.7 Re-assign LUT pins | Checksum: 14f75b0b6
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:24 . Memory (MB): peak = 2067.832 ; gain = 0.000
+
+Phase 3.8 Pipeline Register Optimization
+Phase 3.8 Pipeline Register Optimization | Checksum: 1145fb1b3
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:24 . Memory (MB): peak = 2067.832 ; gain = 0.000
+
+Phase 3.9 Fast Optimization
+Phase 3.9 Fast Optimization | Checksum: 16495c004
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:30 . Memory (MB): peak = 2067.832 ; gain = 0.000
+Phase 3 Detail Placement | Checksum: 16495c004
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:30 . Memory (MB): peak = 2067.832 ; gain = 0.000
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: 1074fc575
+
+Phase 4.1.1.1 BUFG Insertion
+
+Starting Physical Synthesis Task
+
+Phase 1 Physical Synthesis Initialization
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-30.808 | TNS=-13992.320 |
+Phase 1 Physical Synthesis Initialization | Checksum: 1b17cc92b
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.380 . Memory (MB): peak = 2067.832 ; gain = 0.000
+INFO: [Place 46-56] BUFG insertion identified 0 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 0, Skipped due to Timing Degradation: 0, Skipped due to netlist editing failed: 0.
+Ending Physical Synthesis Task | Checksum: 1b17cc92b
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.685 . Memory (MB): peak = 2067.832 ; gain = 0.000
+Phase 4.1.1.1 BUFG Insertion | Checksum: 1074fc575
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:33 . Memory (MB): peak = 2067.832 ; gain = 0.000
+
+Phase 4.1.1.2 Post Placement Timing Optimization
+INFO: [Place 30-746] Post Placement Timing Summary WNS=-29.377. For the most accurate timing information please run report_timing.
+Phase 4.1.1.2 Post Placement Timing Optimization | Checksum: 1a5b390c3
+
+Time (s): cpu = 00:00:35 ; elapsed = 00:01:05 . Memory (MB): peak = 2328.246 ; gain = 260.414
+
+Time (s): cpu = 00:00:35 ; elapsed = 00:01:05 . Memory (MB): peak = 2328.246 ; gain = 260.414
+Phase 4.1 Post Commit Optimization | Checksum: 1a5b390c3
+
+Time (s): cpu = 00:00:35 ; elapsed = 00:01:05 . Memory (MB): peak = 2328.246 ; gain = 260.414
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 1a5b390c3
+
+Time (s): cpu = 00:00:35 ; elapsed = 00:01:05 . Memory (MB): peak = 2328.246 ; gain = 260.414
+
+Phase 4.3 Placer Reporting
+
+Phase 4.3.1 Print Estimated Congestion
+INFO: [Place 30-612] Post-Placement Estimated Congestion 
+ ____________________________________________________
+|           | Global Congestion | Short Congestion  |
+| Direction | Region Size       | Region Size       |
+|___________|___________________|___________________|
+|      North|                2x2|                2x2|
+|___________|___________________|___________________|
+|      South|                1x1|                2x2|
+|___________|___________________|___________________|
+|       East|                1x1|                1x1|
+|___________|___________________|___________________|
+|       West|                1x1|                1x1|
+|___________|___________________|___________________|
+
+Phase 4.3.1 Print Estimated Congestion | Checksum: 1a5b390c3
+
+Time (s): cpu = 00:00:35 ; elapsed = 00:01:05 . Memory (MB): peak = 2328.246 ; gain = 260.414
+Phase 4.3 Placer Reporting | Checksum: 1a5b390c3
+
+Time (s): cpu = 00:00:35 ; elapsed = 00:01:05 . Memory (MB): peak = 2328.246 ; gain = 260.414
+
+Phase 4.4 Final Placement Cleanup
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2328.246 ; gain = 0.000
+
+Time (s): cpu = 00:00:35 ; elapsed = 00:01:05 . Memory (MB): peak = 2328.246 ; gain = 260.414
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 2178b8ff3
+
+Time (s): cpu = 00:00:35 ; elapsed = 00:01:05 . Memory (MB): peak = 2328.246 ; gain = 260.414
+Ending Placer Task | Checksum: 12a042fae
+
+Time (s): cpu = 00:00:35 ; elapsed = 00:01:05 . Memory (MB): peak = 2328.246 ; gain = 260.414
+INFO: [Common 17-83] Releasing license: Implementation
+75 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:00:36 ; elapsed = 00:01:06 . Memory (MB): peak = 2328.246 ; gain = 260.414
+INFO: [runtcl-4] Executing : report_io -file finalproject_io_placed.rpt
+report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.045 . Memory (MB): peak = 2329.066 ; gain = 0.820
+INFO: [runtcl-4] Executing : report_utilization -file finalproject_utilization_placed.rpt -pb finalproject_utilization_placed.pb
+INFO: [runtcl-4] Executing : report_control_sets -verbose -file finalproject_control_sets_placed.rpt
+report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 2329.066 ; gain = 0.000
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.823 . Memory (MB): peak = 2347.930 ; gain = 18.863
+INFO: [Common 17-1381] The checkpoint 'C:/Users/chaoy/Downloads/finalproject/finalproject.runs/impl_1/finalproject_placed.dcp' has been generated.
+Command: phys_opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a35ti'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a35ti'
+
+Starting Initial Update Timing Task
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2358.348 ; gain = 10.418
+INFO: [Vivado_Tcl 4-1435] PhysOpt_Tcl_Interface Runtime Before Starting Physical Synthesis Task | CPU: 1.00s |  WALL: 1.39s
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2358.348 ; gain = 0.000
+
+Starting Physical Synthesis Task
+
+Phase 1 Physical Synthesis Initialization
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-29.359 | TNS=-13600.785 |
+Phase 1 Physical Synthesis Initialization | Checksum: 14269d2e7
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.731 . Memory (MB): peak = 2358.348 ; gain = 0.000
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-29.359 | TNS=-13600.785 |
+
+Phase 2 DSP Register Optimization
+INFO: [Physopt 32-456] No candidate cells for DSP register optimization found in the design.
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Phase 2 DSP Register Optimization | Checksum: 14269d2e7
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.756 . Memory (MB): peak = 2358.348 ; gain = 0.000
+
+Phase 3 Critical Path Optimization
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-29.359 | TNS=-13600.785 |
+INFO: [Physopt 32-702] Processed net snake_pos[183]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net ball_y_pos[1].  Re-placed instance ball_y_pos_reg[1]
+INFO: [Physopt 32-735] Processed net ball_y_pos[1]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-29.345 | TNS=-13594.657 |
+INFO: [Physopt 32-702] Processed net snake_pos[54]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ball_x_pos_reg_n_0_[1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net snake_pos[54]_i_3_n_0.  Re-placed instance snake_pos[54]_i_3
+INFO: [Physopt 32-735] Processed net snake_pos[54]_i_3_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-29.344 | TNS=-13594.648 |
+INFO: [Physopt 32-702] Processed net snake_VPOS[139]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net snake_VPOS[139]_i_1_n_0. Critical path length was reduced through logic transformation on cell snake_VPOS[139]_i_1_comp.
+INFO: [Physopt 32-735] Processed net snake_VPOS032_out[139]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-29.343 | TNS=-13594.235 |
+INFO: [Physopt 32-663] Processed net ball_y_pos[2].  Re-placed instance ball_y_pos_reg[2]
+INFO: [Physopt 32-735] Processed net ball_y_pos[2]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-29.343 | TNS=-13595.088 |
+INFO: [Physopt 32-663] Processed net ball_y_pos[1].  Re-placed instance ball_y_pos_reg[1]
+INFO: [Physopt 32-735] Processed net ball_y_pos[1]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-29.341 | TNS=-13588.883 |
+INFO: [Physopt 32-702] Processed net snake_pos[104]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net snake_pos[104]_i_1_n_0. Critical path length was reduced through logic transformation on cell snake_pos[104]_i_1_comp.
+INFO: [Physopt 32-735] Processed net snake_pos[104]_i_3_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-29.341 | TNS=-13588.431 |
+INFO: [Physopt 32-702] Processed net snake_pos[90]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net snake_pos[90]_i_1_n_0. Critical path length was reduced through logic transformation on cell snake_pos[90]_i_1_comp.
+INFO: [Physopt 32-735] Processed net snake_pos[90]_i_3_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-29.341 | TNS=-13588.186 |
+INFO: [Physopt 32-702] Processed net snake_VPOS[185]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net snake_VPOS032_out[185].  Re-placed instance snake_VPOS[185]_i_3
+INFO: [Physopt 32-735] Processed net snake_VPOS032_out[185]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-29.338 | TNS=-13588.063 |
+INFO: [Physopt 32-702] Processed net snake_VPOS[72]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net snake_VPOS[72]_i_1_n_0. Critical path length was reduced through logic transformation on cell snake_VPOS[72]_i_1_comp.
+INFO: [Physopt 32-735] Processed net snake_VPOS032_out[72]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-29.337 | TNS=-13588.057 |
+INFO: [Physopt 32-710] Processed net snake_pos[54]_i_1_n_0. Critical path length was reduced through logic transformation on cell snake_pos[54]_i_1_comp.
+INFO: [Physopt 32-735] Processed net snake_pos[54]_i_3_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-29.337 | TNS=-13587.899 |
+INFO: [Physopt 32-702] Processed net snake_pos[152]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net snake_pos[152]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net snake_pos[152]_i_3_n_0. Critical path length was reduced through logic transformation on cell snake_pos[152]_i_3_comp.
+INFO: [Physopt 32-735] Processed net snake_pos013_out[152]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-29.337 | TNS=-13587.812 |
+INFO: [Physopt 32-702] Processed net snake_VPOS[63]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ball_x_pos_reg_n_0_[1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net snake_VPOS032_out[63]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net snake_VPOS[63]_i_9_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net snake_VPOS[63]_i_13_n_0.  Re-placed instance snake_VPOS[63]_i_13
+INFO: [Physopt 32-735] Processed net snake_VPOS[63]_i_13_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-29.336 | TNS=-13587.343 |
+INFO: [Physopt 32-702] Processed net snake_VPOS[50]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net snake_VPOS032_out[50]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 12 pins.
+INFO: [Physopt 32-735] Processed net snake_VPOS[50]_i_9_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-29.336 | TNS=-13587.136 |
+INFO: [Physopt 32-702] Processed net snake_VPOS[58]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net snake_VPOS032_out[58].  Re-placed instance snake_VPOS[58]_i_3
+INFO: [Physopt 32-735] Processed net snake_VPOS032_out[58]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-29.334 | TNS=-13587.111 |
+INFO: [Physopt 32-702] Processed net snake_VPOS[25]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net snake_VPOS032_out[25]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-735] Processed net snake_VPOS[25]_i_9_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-29.334 | TNS=-13587.071 |
+INFO: [Physopt 32-702] Processed net snake_VPOS[131]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net snake_VPOS032_out[131]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net snake_VPOS[131]_i_9_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 21 pins.
+INFO: [Physopt 32-735] Processed net snake_VPOS[135]_i_14_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-29.333 | TNS=-13586.679 |
+INFO: [Physopt 32-702] Processed net snake_pos[32]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net snake_pos[32]_i_3_n_0.  Re-placed instance snake_pos[32]_i_3
+INFO: [Physopt 32-735] Processed net snake_pos[32]_i_3_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-29.333 | TNS=-13586.454 |
+INFO: [Physopt 32-702] Processed net snake_VPOS[170]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 21 pins.
+INFO: [Physopt 32-735] Processed net snake_VPOS032_out[170]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-29.333 | TNS=-13586.448 |
+INFO: [Physopt 32-702] Processed net snake_VPOS[72]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net snake_VPOS[74]_i_8_n_0.  Re-placed instance snake_VPOS[74]_i_8
+INFO: [Physopt 32-735] Processed net snake_VPOS[74]_i_8_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-29.332 | TNS=-13586.401 |
+INFO: [Physopt 32-702] Processed net snake_pos[88]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net snake_pos[88]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net snake_pos[88]_i_9_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 16 pins.
+INFO: [Physopt 32-735] Processed net snake_pos19_in[88]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-29.331 | TNS=-13586.277 |
+INFO: [Physopt 32-702] Processed net snake_VPOS[193]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net snake_VPOS131_in[193].  Re-placed instance snake_VPOS[193]_i_3
+INFO: [Physopt 32-735] Processed net snake_VPOS131_in[193]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-29.331 | TNS=-13585.914 |
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-29.331 | TNS=-13585.914 |
+Phase 3 Critical Path Optimization | Checksum: dff299fb
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2358.348 ; gain = 0.000
+
+Phase 4 Critical Path Optimization
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-29.331 | TNS=-13585.914 |
+INFO: [Physopt 32-702] Processed net snake_VPOS[98]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ball_x_pos_reg_n_0_[1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net snake_VPOS[98]_i_1_n_0. Critical path length was reduced through logic transformation on cell snake_VPOS[98]_i_1_comp.
+INFO: [Physopt 32-735] Processed net snake_VPOS032_out[98]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-29.330 | TNS=-13585.762 |
+INFO: [Physopt 32-702] Processed net snake_pos[142]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net snake_pos[142]_i_3_n_0.  Re-placed instance snake_pos[142]_i_3
+INFO: [Physopt 32-735] Processed net snake_pos[142]_i_3_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-29.329 | TNS=-13585.441 |
+INFO: [Physopt 32-702] Processed net snake_pos[58]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net snake_pos[58]_i_1_n_0. Critical path length was reduced through logic transformation on cell snake_pos[58]_i_1_comp.
+INFO: [Physopt 32-735] Processed net snake_pos[58]_i_3_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-29.328 | TNS=-13585.162 |
+INFO: [Physopt 32-702] Processed net snake_VPOS[170]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net snake_VPOS[170]_i_1_n_0. Critical path length was reduced through logic transformation on cell snake_VPOS[170]_i_1_comp.
+INFO: [Physopt 32-735] Processed net snake_VPOS032_out[170]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-29.328 | TNS=-13585.072 |
+INFO: [Physopt 32-702] Processed net snake_VPOS[66]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net snake_VPOS[66]_i_1_n_0. Critical path length was reduced through logic transformation on cell snake_VPOS[66]_i_1_comp.
+INFO: [Physopt 32-735] Processed net snake_VPOS032_out[66]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-29.327 | TNS=-13584.855 |
+INFO: [Physopt 32-702] Processed net snake_VPOS[46]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net snake_VPOS032_out[46].  Re-placed instance snake_VPOS[46]_i_3
+INFO: [Physopt 32-735] Processed net snake_VPOS032_out[46]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-29.324 | TNS=-13584.769 |
+INFO: [Physopt 32-702] Processed net snake_VPOS[137]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net snake_VPOS[137]_i_1_n_0. Critical path length was reduced through logic transformation on cell snake_VPOS[137]_i_1_comp.
+INFO: [Physopt 32-735] Processed net snake_VPOS032_out[137]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-29.323 | TNS=-13584.371 |
+INFO: [Physopt 32-702] Processed net snake_pos[18]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net snake_pos[18]_i_1_n_0. Critical path length was reduced through logic transformation on cell snake_pos[18]_i_1_comp.
+INFO: [Physopt 32-735] Processed net snake_pos[18]_i_3_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-29.322 | TNS=-13584.057 |
+INFO: [Physopt 32-702] Processed net snake_VPOS[39]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net snake_VPOS[39]_i_1_n_0. Critical path length was reduced through logic transformation on cell snake_VPOS[39]_i_1_comp.
+INFO: [Physopt 32-735] Processed net snake_VPOS032_out[39]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-29.315 | TNS=-13583.884 |
+INFO: [Physopt 32-702] Processed net snake_pos[20]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net snake_pos[20]_i_1_n_0. Critical path length was reduced through logic transformation on cell snake_pos[20]_i_1_comp.
+INFO: [Physopt 32-735] Processed net snake_pos[20]_i_3_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-29.315 | TNS=-13583.577 |
+INFO: [Physopt 32-702] Processed net snake_VPOS[132]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ball_x_pos_reg_n_0_[1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net snake_VPOS032_out[132]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net snake_VPOS[134]_i_9_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net snake_VPOS[134]_i_14_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net snake_VPOS[122]_i_15_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net snake_VPOS_reg[199]_i_40_n_7. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net snake_VPOS[5]_i_14_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net snake_VPOS[193]_i_25_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net snake_VPOS[193]_i_31_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net snake_VPOS[199]_i_156_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net snake_VPOS[199]_i_202_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net snake_pos[2]_i_82_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 19 pins.
+INFO: [Physopt 32-735] Processed net snake_pos[2]_i_92_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-29.224 | TNS=-13547.196 |
+INFO: [Physopt 32-702] Processed net snake_VPOS6[6]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net snake_node[4]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net snake_VPOS[199]_i_87_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net score0.  Re-placed instance ball_x_pos[9]_i_2
+INFO: [Physopt 32-735] Processed net score0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-29.176 | TNS=-13524.109 |
+INFO: [Physopt 32-702] Processed net score0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net vs0/CO[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net vs0/ball_x_pos[9]_i_12_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net vs0/ball_region0[129]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 10 pins.
+INFO: [Physopt 32-735] Processed net vs0/ball_x_pos[9]_i_52_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-29.176 | TNS=-13524.109 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 10 pins.
+INFO: [Physopt 32-735] Processed net vs0/ball_x_pos[9]_i_57_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-29.167 | TNS=-13520.233 |
+INFO: [Physopt 32-702] Processed net snake_pos[183]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ball_y_pos[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net snake_pos[183]_i_3_n_0.  Re-placed instance snake_pos[183]_i_3
+INFO: [Physopt 32-735] Processed net snake_pos[183]_i_3_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-29.165 | TNS=-13520.214 |
+INFO: [Physopt 32-702] Processed net snake_pos[155]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net snake_pos[155]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net snake_pos[155]_i_9_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 18 pins.
+INFO: [Physopt 32-735] Processed net snake_pos19_in[155]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-29.164 | TNS=-13520.169 |
+INFO: [Physopt 32-702] Processed net vs0/ball_x_pos[9]_i_54_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net vs0/ball_x_pos_reg[9]_i_51_n_4. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net vs0/ball_x_pos[9]_i_114_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net vs0/ball_x_pos_reg[9]_i_202_n_6. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net vs0/ball_x_pos_reg[9]_i_227_n_4. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 17 pins.
+INFO: [Physopt 32-735] Processed net vs0/ball_x_pos[9]_i_1067_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-29.160 | TNS=-13510.403 |
+INFO: [Physopt 32-702] Processed net snake_pos[103]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net snake_pos[103]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net snake_pos[103]_i_9_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net snake_pos19_in[103]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 23 pins.
+INFO: [Physopt 32-735] Processed net snake_pos[103]_i_15_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-29.158 | TNS=-13510.219 |
+INFO: [Physopt 32-702] Processed net snake_pos[111]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net snake_pos[111]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net snake_pos[111]_i_9_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net snake_pos19_in[111]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 22 pins.
+INFO: [Physopt 32-735] Processed net snake_pos[111]_i_15_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-29.157 | TNS=-13510.206 |
+INFO: [Physopt 32-702] Processed net snake_pos[147]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net snake_pos[147]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net snake_pos[147]_i_9_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net snake_pos19_in[147]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net snake_pos[147]_i_15_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net snake_pos[147]_i_16_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net snake_pos_reg[199]_i_61_n_1. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net snake_pos[199]_i_91_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net snake_pos[2]_i_24_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net snake_pos_reg[2]_i_35_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net snake_pos_reg[2]_i_63_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 20 pins.
+INFO: [Physopt 32-735] Processed net snake_pos[2]_i_90_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-29.156 | TNS=-13510.058 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 20 pins.
+INFO: [Physopt 32-735] Processed net snake_pos[2]_i_89_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-29.148 | TNS=-13504.749 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 18 pins.
+INFO: [Physopt 32-735] Processed net snake_pos[183]_i_3_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-29.147 | TNS=-13504.664 |
+INFO: [Physopt 32-702] Processed net snake_pos[59]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net snake_pos[59]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net snake_pos013_out[59]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net snake_pos[187]_i_13_n_0.  Re-placed instance snake_pos[187]_i_13
+INFO: [Physopt 32-735] Processed net snake_pos[187]_i_13_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-29.145 | TNS=-13503.972 |
+INFO: [Physopt 32-663] Processed net snake_pos013_out[111].  Re-placed instance snake_pos[111]_i_7
+INFO: [Physopt 32-735] Processed net snake_pos013_out[111]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-29.137 | TNS=-13503.904 |
+INFO: [Physopt 32-702] Processed net snake_pos[92]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 19 pins.
+INFO: [Physopt 32-735] Processed net snake_pos[92]_i_3_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-29.137 | TNS=-13503.602 |
+INFO: [Physopt 32-702] Processed net snake_pos[173]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net snake_pos[173]_i_3_n_0.  Re-placed instance snake_pos[173]_i_3
+INFO: [Physopt 32-735] Processed net snake_pos[173]_i_3_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-29.135 | TNS=-13503.557 |
+INFO: [Physopt 32-702] Processed net vs0/ball_x_pos_reg[9]_i_113_n_4. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net vs0/ball_x_pos[9]_i_211_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net vs0/ball_x_pos_reg[9]_i_328_n_4. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net vs0/ball_x_pos[9]_i_539_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net vs0/ball_x_pos_reg[9]_i_569_n_6. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net vs0/ball_x_pos[9]_i_973_n_0.  Re-placed instance vs0/ball_x_pos[9]_i_973
+INFO: [Physopt 32-735] Processed net vs0/ball_x_pos[9]_i_973_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-29.123 | TNS=-13497.820 |
+INFO: [Physopt 32-702] Processed net vs0/ball_x_pos[9]_i_178_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net vs0/ball_x_pos_reg[9]_i_296_n_4. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net vs0/ball_x_pos[9]_i_404_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net vs0/ball_x_pos_reg[9]_i_390_n_4. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net vs0/ball_x_pos[9]_i_530_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net vs0/ball_x_pos_reg[9]_i_513_n_7. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 26 pins.
+INFO: [Physopt 32-735] Processed net vs0/ball_x_pos[9]_i_1092_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-29.115 | TNS=-13492.246 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 26 pins.
+INFO: [Physopt 32-735] Processed net vs0/ball_x_pos[9]_i_1011_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-29.105 | TNS=-13487.396 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 17 pins.
+INFO: [Physopt 32-735] Processed net vs0/ball_x_pos[9]_i_1120_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-29.095 | TNS=-13482.618 |
+INFO: [Physopt 32-702] Processed net vs0/ball_x_pos[9]_i_974_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net vs0/ball_x_pos[9]_i_971_n_0.  Re-placed instance vs0/ball_x_pos[9]_i_971
+INFO: [Physopt 32-735] Processed net vs0/ball_x_pos[9]_i_971_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-29.089 | TNS=-13479.748 |
+INFO: [Physopt 32-663] Processed net vs0/ball_x_pos[9]_i_1085_n_0.  Re-placed instance vs0/ball_x_pos[9]_i_1085
+INFO: [Physopt 32-735] Processed net vs0/ball_x_pos[9]_i_1085_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-29.087 | TNS=-13478.793 |
+INFO: [Physopt 32-663] Processed net vs0/ball_x_pos[9]_i_966_n_0.  Re-placed instance vs0/ball_x_pos[9]_i_966
+INFO: [Physopt 32-735] Processed net vs0/ball_x_pos[9]_i_966_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-29.077 | TNS=-13474.012 |
+INFO: [Physopt 32-663] Processed net vs0/ball_x_pos[9]_i_1028_n_0.  Re-placed instance vs0/ball_x_pos[9]_i_1028
+INFO: [Physopt 32-735] Processed net vs0/ball_x_pos[9]_i_1028_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-29.055 | TNS=-13463.497 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 6 pins.
+INFO: [Physopt 32-735] Processed net vs0/ball_x_pos[9]_i_973_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-29.054 | TNS=-13463.020 |
+INFO: [Physopt 32-663] Processed net vs0/ball_x_pos[9]_i_1078_n_0.  Re-placed instance vs0/ball_x_pos[9]_i_1078
+INFO: [Physopt 32-735] Processed net vs0/ball_x_pos[9]_i_1078_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-29.054 | TNS=-13463.020 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 10 pins.
+INFO: [Physopt 32-735] Processed net vs0/ball_x_pos[9]_i_1154_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-29.049 | TNS=-13460.629 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 26 pins.
+INFO: [Physopt 32-735] Processed net vs0/ball_x_pos[9]_i_1090_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-29.047 | TNS=-13459.672 |
+INFO: [Physopt 32-702] Processed net vs0/ball_x_pos[9]_i_975_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net vs0/ball_x_pos[9]_i_972_n_0.  Re-placed instance vs0/ball_x_pos[9]_i_972
+INFO: [Physopt 32-735] Processed net vs0/ball_x_pos[9]_i_972_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-29.045 | TNS=-13458.718 |
+INFO: [Physopt 32-663] Processed net vs0/ball_x_pos[9]_i_1020_n_0.  Re-placed instance vs0/ball_x_pos[9]_i_1020
+INFO: [Physopt 32-735] Processed net vs0/ball_x_pos[9]_i_1020_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-29.043 | TNS=-13457.762 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 6 pins.
+INFO: [Physopt 32-735] Processed net vs0/ball_x_pos[9]_i_965_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-29.031 | TNS=-13452.026 |
+INFO: [Physopt 32-663] Processed net vs0/ball_x_pos[9]_i_1087_n_0.  Re-placed instance vs0/ball_x_pos[9]_i_1087
+INFO: [Physopt 32-735] Processed net vs0/ball_x_pos[9]_i_1087_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-29.024 | TNS=-13447.803 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 26 pins.
+INFO: [Physopt 32-735] Processed net vs0/ball_x_pos[9]_i_1010_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-29.024 | TNS=-13447.803 |
+INFO: [Physopt 32-663] Processed net vs0/ball_x_pos[9]_i_1004_n_0.  Re-placed instance vs0/ball_x_pos[9]_i_1004
+INFO: [Physopt 32-735] Processed net vs0/ball_x_pos[9]_i_1004_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-29.020 | TNS=-13446.511 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 26 pins.
+INFO: [Physopt 32-735] Processed net vs0/ball_x_pos[9]_i_1008_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-29.019 | TNS=-13446.110 |
+INFO: [Physopt 32-663] Processed net vs0/ball_x_pos[9]_i_964_n_0.  Re-placed instance vs0/ball_x_pos[9]_i_964
+INFO: [Physopt 32-735] Processed net vs0/ball_x_pos[9]_i_964_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-29.016 | TNS=-13444.676 |
+INFO: [Physopt 32-663] Processed net vs0/ball_x_pos[9]_i_971_n_0.  Re-placed instance vs0/ball_x_pos[9]_i_971
+INFO: [Physopt 32-735] Processed net vs0/ball_x_pos[9]_i_971_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-29.015 | TNS=-13443.846 |
+INFO: [Physopt 32-663] Processed net vs0/ball_x_pos[9]_i_1007_n_0.  Re-placed instance vs0/ball_x_pos[9]_i_1007
+INFO: [Physopt 32-735] Processed net vs0/ball_x_pos[9]_i_1007_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-29.013 | TNS=-13442.901 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 26 pins.
+INFO: [Physopt 32-735] Processed net vs0/ball_x_pos[9]_i_1091_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-29.012 | TNS=-13442.424 |
+INFO: [Physopt 32-702] Processed net vs0/ball_x_pos[9]_i_855_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net vs0/ball_x_pos[9]_i_851_n_0.  Re-placed instance vs0/ball_x_pos[9]_i_851
+INFO: [Physopt 32-735] Processed net vs0/ball_x_pos[9]_i_851_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-29.006 | TNS=-13439.555 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 26 pins.
+INFO: [Physopt 32-735] Processed net vs0/ball_x_pos[9]_i_1084_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-29.005 | TNS=-13439.078 |
+INFO: [Physopt 32-702] Processed net vs0/ball_x_pos[9]_i_856_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net vs0/ball_x_pos[9]_i_852_n_0.  Re-placed instance vs0/ball_x_pos[9]_i_852
+INFO: [Physopt 32-735] Processed net vs0/ball_x_pos[9]_i_852_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-28.998 | TNS=-13435.733 |
+INFO: [Physopt 32-663] Processed net vs0/ball_x_pos[9]_i_1019_n_0.  Re-placed instance vs0/ball_x_pos[9]_i_1019
+INFO: [Physopt 32-735] Processed net vs0/ball_x_pos[9]_i_1019_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-28.998 | TNS=-13435.558 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 26 pins.
+INFO: [Physopt 32-735] Processed net vs0/ball_x_pos[9]_i_1002_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-28.997 | TNS=-13435.075 |
+INFO: [Physopt 32-702] Processed net vs0/ball_x_pos[9]_i_853_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net vs0/ball_x_pos[9]_i_849_n_0.  Re-placed instance vs0/ball_x_pos[9]_i_849
+INFO: [Physopt 32-735] Processed net vs0/ball_x_pos[9]_i_849_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-28.989 | TNS=-13431.250 |
+INFO: [Physopt 32-702] Processed net vs0/ball_x_pos[9]_i_970_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 9 pins.
+INFO: [Physopt 32-735] Processed net vs0/ball_x_pos[9]_i_966_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-28.989 | TNS=-13430.375 |
+INFO: [Physopt 32-663] Processed net vs0/ball_x_pos[9]_i_995_n_0.  Re-placed instance vs0/ball_x_pos[9]_i_995
+INFO: [Physopt 32-735] Processed net vs0/ball_x_pos[9]_i_995_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-28.987 | TNS=-13429.726 |
+INFO: [Physopt 32-663] Processed net vs0/ball_x_pos[9]_i_1006_n_0.  Re-placed instance vs0/ball_x_pos[9]_i_1006
+INFO: [Physopt 32-735] Processed net vs0/ball_x_pos[9]_i_1006_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-28.984 | TNS=-13428.479 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 9 pins.
+INFO: [Physopt 32-735] Processed net vs0/ball_x_pos[9]_i_1174_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-28.979 | TNS=-13426.088 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 23 pins.
+INFO: [Physopt 32-735] Processed net snake_VPOS[132]_i_1_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-28.979 | TNS=-13425.978 |
+INFO: [Physopt 32-702] Processed net snake_VPOS[169]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 23 pins.
+INFO: [Physopt 32-735] Processed net snake_VPOS032_out[169]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-28.977 | TNS=-13425.882 |
+INFO: [Physopt 32-702] Processed net snake_VPOS[67]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net snake_VPOS032_out[67]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net snake_VPOS[67]_i_9_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 18 pins.
+INFO: [Physopt 32-735] Processed net snake_VPOS[71]_i_13_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-28.976 | TNS=-13425.400 |
+INFO: [Physopt 32-702] Processed net snake_VPOS[110]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 22 pins.
+INFO: [Physopt 32-735] Processed net snake_VPOS032_out[110]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-28.976 | TNS=-13425.227 |
+INFO: [Physopt 32-702] Processed net snake_VPOS[16]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net snake_VPOS032_out[16]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net snake_VPOS[18]_i_9_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net snake_VPOS[22]_i_13_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net snake_VPOS[30]_i_15_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net snake_VPOS_reg[199]_i_40_n_1. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 23 pins.
+INFO: [Physopt 32-735] Processed net snake_VPOS[16]_i_1_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-28.974 | TNS=-13425.115 |
+INFO: [Physopt 32-702] Processed net snake_VPOS[58]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 16 pins.
+INFO: [Physopt 32-735] Processed net snake_VPOS032_out[58]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-28.974 | TNS=-13424.848 |
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-28.974 | TNS=-13424.848 |
+Phase 4 Critical Path Optimization | Checksum: bbe3d171
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:18 . Memory (MB): peak = 2662.910 ; gain = 304.562
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.042 . Memory (MB): peak = 2662.910 ; gain = 0.000
+INFO: [Physopt 32-603] Post Physical Optimization Timing Summary | WNS=-28.974 | TNS=-13424.848 |
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization   |  WNS Gain (ns)  |  TNS Gain (ns)  |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+|  DSP Register   |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Critical Path  |          0.385  |        175.937  |            0  |              0  |                    86  |           0  |           2  |  00:00:17  |
+|  Total          |          0.385  |        175.937  |            0  |              0  |                    86  |           0  |           3  |  00:00:17  |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2662.910 ; gain = 0.000
+Ending Physical Synthesis Task | Checksum: f725a737
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:18 . Memory (MB): peak = 2662.910 ; gain = 304.562
+INFO: [Common 17-83] Releasing license: Implementation
+474 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+phys_opt_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:19 . Memory (MB): peak = 2662.910 ; gain = 314.980
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.772 . Memory (MB): peak = 2684.777 ; gain = 21.867
+INFO: [Common 17-1381] The checkpoint 'C:/Users/chaoy/Downloads/finalproject/finalproject.runs/impl_1/finalproject_physopt.dcp' has been generated.
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a35ti'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a35ti'
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command route_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
+
+Phase 1 Build RT Design
+Checksum: PlaceDB: 327a251f ConstDB: 0 ShapeSum: 61690b4e RouteDB: 0
+Post Restoration Checksum: NetGraph: 3bdcb8f | NumContArr: caab1c14 | Constraints: 190a55ad | Timing: 0
+Phase 1 Build RT Design | Checksum: e7733d50
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2755.777 ; gain = 57.875
+
+Phase 2 Router Initialization
+
+Phase 2.1 Fix Topology Constraints
+Phase 2.1 Fix Topology Constraints | Checksum: e7733d50
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2755.777 ; gain = 57.875
+
+Phase 2.2 Pre Route Cleanup
+Phase 2.2 Pre Route Cleanup | Checksum: e7733d50
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2755.777 ; gain = 57.875
+ Number of Nodes with overlaps = 0
+
+Phase 2.3 Update Timing
+Phase 2.3 Update Timing | Checksum: 19b43948f
+
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 2755.777 ; gain = 57.875
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-28.315| TNS=-13096.370| WHS=-0.193 | THS=-8.824 |
+
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0.00884956 %
+  Global Horizontal Routing Utilization  = 0.0108017 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 14054
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 14051
+  Number of Partially Routed Nets     = 3
+  Number of Node Overlaps             = 3
+
+Phase 2 Router Initialization | Checksum: 21f7cfbdb
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 2755.777 ; gain = 57.875
+
+Phase 3 Initial Routing
+
+Phase 3.1 Global Routing
+Phase 3.1 Global Routing | Checksum: 21f7cfbdb
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 2755.777 ; gain = 57.875
+Phase 3 Initial Routing | Checksum: 192f7ef5e
+
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 2755.777 ; gain = 57.875
+INFO: [Route 35-580] Design has 30 pins with tight setup and hold constraints.
+
+The top 5 pins with tight setup and hold constraints:
+
++====================+===================+============================+
+| Launch Setup Clock | Launch Hold Clock | Pin                        |
++====================+===================+============================+
+| sys_clk_pin        | sys_clk_pin       | snake_pos_reg[9]/D         |
+| sys_clk_pin        | sys_clk_pin       | snake_node_reg[4]_rep/D    |
+| sys_clk_pin        | sys_clk_pin       | snake_node_reg[5]/D        |
+| sys_clk_pin        | sys_clk_pin       | snake_node_reg[5]_rep__0/D |
+| sys_clk_pin        | sys_clk_pin       | snake_node_reg[5]_rep__2/D |
++--------------------+-------------------+----------------------------+
+
+File with complete list of pins: tight_setup_hold_pins.txt
+
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+ Number of Nodes with overlaps = 5368
+ Number of Nodes with overlaps = 1230
+ Number of Nodes with overlaps = 502
+ Number of Nodes with overlaps = 253
+ Number of Nodes with overlaps = 120
+ Number of Nodes with overlaps = 65
+ Number of Nodes with overlaps = 41
+ Number of Nodes with overlaps = 18
+ Number of Nodes with overlaps = 4
+ Number of Nodes with overlaps = 6
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-31.650| TNS=-14969.799| WHS=N/A    | THS=N/A    |
+
+Phase 4.1 Global Iteration 0 | Checksum: 17fad5f61
+
+Time (s): cpu = 00:00:46 ; elapsed = 00:00:58 . Memory (MB): peak = 2755.777 ; gain = 57.875
+
+Phase 4.2 Global Iteration 1
+ Number of Nodes with overlaps = 352
+ Number of Nodes with overlaps = 259
+ Number of Nodes with overlaps = 201
+ Number of Nodes with overlaps = 177
+ Number of Nodes with overlaps = 94
+ Number of Nodes with overlaps = 38
+ Number of Nodes with overlaps = 8
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-31.206| TNS=-14866.798| WHS=N/A    | THS=N/A    |
+
+Phase 4.2 Global Iteration 1 | Checksum: 167db01f7
+
+Time (s): cpu = 00:01:09 ; elapsed = 00:01:25 . Memory (MB): peak = 2755.777 ; gain = 57.875
+
+Phase 4.3 Global Iteration 2
+ Number of Nodes with overlaps = 351
+ Number of Nodes with overlaps = 161
+ Number of Nodes with overlaps = 73
+Phase 4.3 Global Iteration 2 | Checksum: 188af134a
+
+Time (s): cpu = 00:01:22 ; elapsed = 00:01:39 . Memory (MB): peak = 2755.777 ; gain = 57.875
+Phase 4 Rip-up And Reroute | Checksum: 188af134a
+
+Time (s): cpu = 00:01:22 ; elapsed = 00:01:39 . Memory (MB): peak = 2755.777 ; gain = 57.875
+
+Phase 5 Delay and Skew Optimization
+
+Phase 5.1 Delay CleanUp
+
+Phase 5.1.1 Update Timing
+Phase 5.1.1 Update Timing | Checksum: 157e53e3b
+
+Time (s): cpu = 00:01:23 ; elapsed = 00:01:40 . Memory (MB): peak = 2755.777 ; gain = 57.875
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-31.206| TNS=-14860.544| WHS=N/A    | THS=N/A    |
+
+ Number of Nodes with overlaps = 0
+Phase 5.1 Delay CleanUp | Checksum: 217cbf3d4
+
+Time (s): cpu = 00:01:23 ; elapsed = 00:01:40 . Memory (MB): peak = 2755.777 ; gain = 57.875
+
+Phase 5.2 Clock Skew Optimization
+Phase 5.2 Clock Skew Optimization | Checksum: 217cbf3d4
+
+Time (s): cpu = 00:01:23 ; elapsed = 00:01:40 . Memory (MB): peak = 2755.777 ; gain = 57.875
+Phase 5 Delay and Skew Optimization | Checksum: 217cbf3d4
+
+Time (s): cpu = 00:01:23 ; elapsed = 00:01:40 . Memory (MB): peak = 2755.777 ; gain = 57.875
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Hold Fix Iter
+
+Phase 6.1.1 Update Timing
+Phase 6.1.1 Update Timing | Checksum: 2557d90b1
+
+Time (s): cpu = 00:01:23 ; elapsed = 00:01:41 . Memory (MB): peak = 2755.777 ; gain = 57.875
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-30.999| TNS=-14800.410| WHS=0.110  | THS=0.000  |
+
+Phase 6.1 Hold Fix Iter | Checksum: 2557d90b1
+
+Time (s): cpu = 00:01:23 ; elapsed = 00:01:41 . Memory (MB): peak = 2755.777 ; gain = 57.875
+Phase 6 Post Hold Fix | Checksum: 2557d90b1
+
+Time (s): cpu = 00:01:23 ; elapsed = 00:01:41 . Memory (MB): peak = 2755.777 ; gain = 57.875
+
+Phase 7 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 8.80706 %
+  Global Horizontal Routing Utilization  = 9.76835 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+
+--GLOBAL Congestion:
+Utilization threshold used for congestion level computation: 0.85
+Congestion Report
+North Dir 1x1 Area, Max Cong = 73.8739%, No Congested Regions.
+South Dir 1x1 Area, Max Cong = 83.7838%, No Congested Regions.
+East Dir 1x1 Area, Max Cong = 70.5882%, No Congested Regions.
+West Dir 1x1 Area, Max Cong = 85.2941%, Congestion bounded by tiles (Lower Left Tile -> Upper Right Tile):
+   INT_L_X34Y80 -> INT_L_X34Y80
+
+------------------------------
+Reporting congestion hotspots
+------------------------------
+Direction: North
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: South
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: East
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: West
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 1
+
+Phase 7 Route finalize | Checksum: 1fd7d185a
+
+Time (s): cpu = 00:01:23 ; elapsed = 00:01:41 . Memory (MB): peak = 2755.777 ; gain = 57.875
+
+Phase 8 Verifying routed nets
+
+ Verification completed successfully
+Phase 8 Verifying routed nets | Checksum: 1fd7d185a
+
+Time (s): cpu = 00:01:23 ; elapsed = 00:01:41 . Memory (MB): peak = 2755.777 ; gain = 57.875
+
+Phase 9 Depositing Routes
+Phase 9 Depositing Routes | Checksum: 17822e6eb
+
+Time (s): cpu = 00:01:24 ; elapsed = 00:01:42 . Memory (MB): peak = 2755.777 ; gain = 57.875
+
+Phase 10 Post Router Timing
+INFO: [Route 35-57] Estimated Timing Summary | WNS=-30.999| TNS=-14800.410| WHS=0.110  | THS=0.000  |
+
+WARNING: [Route 35-328] Router estimated timing not met.
+Resolution: For a complete and accurate timing signoff, report_timing_summary must be run after route_design. Alternatively, route_design can be run with the -timing_summary option to enable a complete timing signoff at the end of route_design.
+Phase 10 Post Router Timing | Checksum: 17822e6eb
+
+Time (s): cpu = 00:01:24 ; elapsed = 00:01:42 . Memory (MB): peak = 2755.777 ; gain = 57.875
+INFO: [Route 35-16] Router Completed Successfully
+
+Phase 11 Post-Route Event Processing
+Phase 11 Post-Route Event Processing | Checksum: 6c3f2ee2
+
+Time (s): cpu = 00:01:24 ; elapsed = 00:01:43 . Memory (MB): peak = 2755.777 ; gain = 57.875
+
+Time (s): cpu = 00:01:24 ; elapsed = 00:01:43 . Memory (MB): peak = 2755.777 ; gain = 57.875
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+493 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:01:25 ; elapsed = 00:01:44 . Memory (MB): peak = 2755.777 ; gain = 71.000
+INFO: [runtcl-4] Executing : report_drc -file finalproject_drc_routed.rpt -pb finalproject_drc_routed.pb -rpx finalproject_drc_routed.rpx
+Command: report_drc -file finalproject_drc_routed.rpt -pb finalproject_drc_routed.pb -rpx finalproject_drc_routed.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file C:/Users/chaoy/Downloads/finalproject/finalproject.runs/impl_1/finalproject_drc_routed.rpt.
+report_drc completed successfully
+INFO: [runtcl-4] Executing : report_methodology -file finalproject_methodology_drc_routed.rpt -pb finalproject_methodology_drc_routed.pb -rpx finalproject_methodology_drc_routed.rpx
+Command: report_methodology -file finalproject_methodology_drc_routed.rpt -pb finalproject_methodology_drc_routed.pb -rpx finalproject_methodology_drc_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-133] Running Methodology with 2 threads
+INFO: [Vivado_Tcl 2-1520] The results of Report Methodology are in file C:/Users/chaoy/Downloads/finalproject/finalproject.runs/impl_1/finalproject_methodology_drc_routed.rpt.
+report_methodology completed successfully
+report_methodology: Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 2755.777 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_power -file finalproject_power_routed.rpt -pb finalproject_power_summary_routed.pb -rpx finalproject_power_routed.rpx
+Command: report_power -file finalproject_power_routed.rpt -pb finalproject_power_summary_routed.pb -rpx finalproject_power_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+503 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+INFO: [runtcl-4] Executing : report_route_status -file finalproject_route_status.rpt -pb finalproject_route_status.pb
+INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -report_unconstrained -file finalproject_timing_summary_routed.rpt -pb finalproject_timing_summary_routed.pb -rpx finalproject_timing_summary_routed.rpx -warn_on_violation 
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1L, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+CRITICAL WARNING: [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.
+INFO: [runtcl-4] Executing : report_incremental_reuse -file finalproject_incremental_reuse_routed.rpt
+INFO: [Vivado_Tcl 4-1062] Incremental flow is disabled. No incremental reuse Info to report.
+INFO: [runtcl-4] Executing : report_clock_utilization -file finalproject_clock_utilization_routed.rpt
+INFO: [runtcl-4] Executing : report_bus_skew -warn_on_violation -file finalproject_bus_skew_routed.rpt -pb finalproject_bus_skew_routed.pb -rpx finalproject_bus_skew_routed.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1L, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.914 . Memory (MB): peak = 2755.777 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/chaoy/Downloads/finalproject/finalproject.runs/impl_1/finalproject_routed.dcp' has been generated.
+Command: write_bitstream -force finalproject.bit
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a35ti'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a35ti'
+Running DRC as a precondition to command write_bitstream
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1 input ball_region1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1 input ball_region1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__0 input ball_region1__0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__0 input ball_region1__0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__1 input ball_region1__1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__1 input ball_region1__1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__10 input ball_region1__10/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__10 input ball_region1__10/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__11 input ball_region1__11/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__11 input ball_region1__11/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__12 input ball_region1__12/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__12 input ball_region1__12/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__13 input ball_region1__13/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__13 input ball_region1__13/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__13 input ball_region1__13/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__14 input ball_region1__14/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__14 input ball_region1__14/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__15 input ball_region1__15/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__15 input ball_region1__15/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__15 input ball_region1__15/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__16 input ball_region1__16/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__16 input ball_region1__16/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__17 input ball_region1__17/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__17 input ball_region1__17/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__18 input ball_region1__18/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__18 input ball_region1__18/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__19 input ball_region1__19/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__19 input ball_region1__19/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__2 input ball_region1__2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__2 input ball_region1__2/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__2 input ball_region1__2/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__20 input ball_region1__20/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__20 input ball_region1__20/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__21 input ball_region1__21/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__21 input ball_region1__21/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__22 input ball_region1__22/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__22 input ball_region1__22/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__23 input ball_region1__23/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__23 input ball_region1__23/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__24 input ball_region1__24/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__24 input ball_region1__24/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__25 input ball_region1__25/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__25 input ball_region1__25/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__25 input ball_region1__25/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__26 input ball_region1__26/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__26 input ball_region1__26/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__27 input ball_region1__27/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__27 input ball_region1__27/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__28 input ball_region1__28/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__28 input ball_region1__28/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__29 input ball_region1__29/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__29 input ball_region1__29/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__3 input ball_region1__3/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__3 input ball_region1__3/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__30 input ball_region1__30/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__30 input ball_region1__30/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__30 input ball_region1__30/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__31 input ball_region1__31/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__31 input ball_region1__31/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__32 input ball_region1__32/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__32 input ball_region1__32/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__33 input ball_region1__33/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__33 input ball_region1__33/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__34 input ball_region1__34/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__34 input ball_region1__34/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__35 input ball_region1__35/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__35 input ball_region1__35/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__36 input ball_region1__36/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__36 input ball_region1__36/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__36 input ball_region1__36/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__37 input ball_region1__37/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__37 input ball_region1__37/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__38 input ball_region1__38/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__38 input ball_region1__38/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__38 input ball_region1__38/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__39 input ball_region1__39/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__39 input ball_region1__39/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__4 input ball_region1__4/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__4 input ball_region1__4/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__40 input ball_region1__40/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__40 input ball_region1__40/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__41 input ball_region1__41/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__41 input ball_region1__41/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__42 input ball_region1__42/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__42 input ball_region1__42/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__43 input ball_region1__43/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__43 input ball_region1__43/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__44 input ball_region1__44/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__44 input ball_region1__44/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__5 input ball_region1__5/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__5 input ball_region1__5/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__6 input ball_region1__6/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__6 input ball_region1__6/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__7 input ball_region1__7/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__7 input ball_region1__7/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__7 input ball_region1__7/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__8 input ball_region1__8/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__8 input ball_region1__8/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__9 input ball_region1__9/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP ball_region1__9 input ball_region1__9/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+INFO: [Common 17-14] Message 'DRC DPIP-1' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP ball_region1 output ball_region1/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP ball_region1__0 output ball_region1__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP ball_region1__1 output ball_region1__1/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP ball_region1__11 output ball_region1__11/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP ball_region1__12 output ball_region1__12/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP ball_region1__13 output ball_region1__13/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP ball_region1__14 output ball_region1__14/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP ball_region1__15 output ball_region1__15/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP ball_region1__17 output ball_region1__17/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP ball_region1__18 output ball_region1__18/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP ball_region1__2 output ball_region1__2/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP ball_region1__20 output ball_region1__20/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP ball_region1__21 output ball_region1__21/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP ball_region1__22 output ball_region1__22/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP ball_region1__23 output ball_region1__23/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP ball_region1__24 output ball_region1__24/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP ball_region1__25 output ball_region1__25/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP ball_region1__29 output ball_region1__29/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP ball_region1__30 output ball_region1__30/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP ball_region1__31 output ball_region1__31/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP ball_region1__34 output ball_region1__34/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP ball_region1__35 output ball_region1__35/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP ball_region1__36 output ball_region1__36/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP ball_region1__37 output ball_region1__37/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP ball_region1__38 output ball_region1__38/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP ball_region1__40 output ball_region1__40/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP ball_region1__41 output ball_region1__41/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP ball_region1__43 output ball_region1__43/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP ball_region1__44 output ball_region1__44/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP ball_region1__6 output ball_region1__6/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP ball_region1__7 output ball_region1__7/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP ball_region1__8 output ball_region1__8/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP ball_region1 multiplier stage ball_region1/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP ball_region1__0 multiplier stage ball_region1__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP ball_region1__1 multiplier stage ball_region1__1/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP ball_region1__11 multiplier stage ball_region1__11/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP ball_region1__12 multiplier stage ball_region1__12/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP ball_region1__13 multiplier stage ball_region1__13/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP ball_region1__14 multiplier stage ball_region1__14/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP ball_region1__15 multiplier stage ball_region1__15/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP ball_region1__17 multiplier stage ball_region1__17/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP ball_region1__18 multiplier stage ball_region1__18/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP ball_region1__2 multiplier stage ball_region1__2/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP ball_region1__20 multiplier stage ball_region1__20/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP ball_region1__21 multiplier stage ball_region1__21/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP ball_region1__22 multiplier stage ball_region1__22/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP ball_region1__23 multiplier stage ball_region1__23/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP ball_region1__24 multiplier stage ball_region1__24/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP ball_region1__25 multiplier stage ball_region1__25/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP ball_region1__29 multiplier stage ball_region1__29/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP ball_region1__30 multiplier stage ball_region1__30/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP ball_region1__31 multiplier stage ball_region1__31/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP ball_region1__34 multiplier stage ball_region1__34/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP ball_region1__35 multiplier stage ball_region1__35/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP ball_region1__36 multiplier stage ball_region1__36/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP ball_region1__37 multiplier stage ball_region1__37/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP ball_region1__38 multiplier stage ball_region1__38/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP ball_region1__40 multiplier stage ball_region1__40/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP ball_region1__41 multiplier stage ball_region1__41/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP ball_region1__43 multiplier stage ball_region1__43/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP ball_region1__44 multiplier stage ball_region1__44/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP ball_region1__6 multiplier stage ball_region1__6/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP ball_region1__7 multiplier stage ball_region1__7/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP ball_region1__8 multiplier stage ball_region1__8/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC PDRC-153] Gated clock check: Net P_next_reg[3]_i_2_n_0 is a gated clock net sourced by a combinational pin P_next_reg[3]_i_2/O, cell P_next_reg[3]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+INFO: [Vivado 12-3199] DRC finished with 0 Errors, 165 Warnings
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+INFO: [Designutils 20-2272] Running write_bitstream with 2 threads.
+Loading data files...
+Loading site data...
+Loading route data...
+Processing options...
+Creating bitmap...
+Creating bitstream...
+Writing bitstream ./finalproject.bit...
+INFO: [Vivado 12-1842] Bitgen Completed Successfully.
+INFO: [Project 1-1876] WebTalk data collection is mandatory when using a ULT device. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
+INFO: [Common 17-83] Releasing license: Implementation
+15 Infos, 165 Warnings, 0 Critical Warnings and 0 Errors encountered.
+write_bitstream completed successfully
+write_bitstream: Time (s): cpu = 00:00:12 ; elapsed = 00:00:11 . Memory (MB): peak = 2907.395 ; gain = 151.617
+INFO: [Common 17-206] Exiting Vivado at Fri Dec 29 09:50:35 2023...
